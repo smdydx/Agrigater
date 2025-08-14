@@ -3,7 +3,7 @@ modules = ["nodejs-20"]
 channel = "stable-25_05"
 
 [workflows]
-runButton = "React Native Dev"
+runButton = "React Native Web"
 
 [[workflows.workflow]]
 name = "React Native Dev"
@@ -13,3 +13,12 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm start"
+
+[[workflows.workflow]]
+name = "React Native Web"
+author = 46257947
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "expo start --web --port 5000"
