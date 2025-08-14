@@ -1,2 +1,15 @@
+modules = ["nodejs-20"]
 [nix]
 channel = "stable-25_05"
+
+[workflows]
+runButton = "React Native Dev"
+
+[[workflows.workflow]]
+name = "React Native Dev"
+author = 46257947
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm start"
